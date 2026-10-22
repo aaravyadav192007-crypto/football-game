@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARCADE SPORTS</p>
+        <h1>⚽ Football Arena</h1>
+      </div>
+      <button id="restartBtn" class="restart">↻ Restart</button>
+    </header>
+
+    <section class="scoreboard">
+      <div class="team">
+        <span class="team-icon">🔵</span>
+        <span>YOU</span>
+      </div>
+      <div class="score">
+        <span id="playerScore">0</span>
+        <span class="dash">:</span>
+        <span id="computerScore">0</span>
+      </div>
+      <div class="team opponent">
+        <span>CPU</span>
+        <span class="team-icon">🔴</span>
+      </div>
+      <div class="timer">TIME <span id="timer">60</span>s</div>
+    </section>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas" width="900" height="520"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div class="big-ball">⚽</div>
+          <h2 id="overlayTitle">Kick Off!</h2>
+          <p id="overlayText">Score goals before time runs out.</p>
+          <button id="startBtn">Start Match</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="instructions">
+      <h2>How to play</h2>
+      <p><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys to move</p>
+      <p><kbd>SPACE</kbd> Kick the ball when you're close to it</p>
+      <p class="hint">Aim for the right-side goal. Outsmart the goalkeeper!</p>
+    </section>
+
+    <section class="mobile-controls">
+      <div class="movement-pad">
+        <button data-key="ArrowUp">▲</button>
+        <div>
+          <button data-key="ArrowLeft">◀</button>
+          <button data-key="ArrowDown">▼</button>
+          <button data-key="ArrowRight">▶</button>
+        </div>
+      </div>
+      <button id="kickBtn" class="kick-btn">⚽ KICK</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

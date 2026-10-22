@@ -1,0 +1,266 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 14px;
+  background: #07111f;
+  color: #f8fafc;
+  font-family: Arial, sans-serif;
+}
+
+.game-container {
+  width: min(100%, 960px);
+  margin: auto;
+}
+
+.topbar, .scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  color: #38e7a0;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0 0 7px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(23px, 4vw, 34px);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  touch-action: manipulation;
+}
+
+.restart {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 11px 15px;
+}
+
+.scoreboard {
+  background: #111e30;
+  border: 1px solid #25364c;
+  border-radius: 14px 14px 0 0;
+  padding: 15px 18px;
+  flex-wrap: wrap;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.team-icon {
+  font-size: 22px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash {
+  color: #64748b;
+}
+
+.timer {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#timer {
+  color: #38e7a0;
+  font-size: 19px;
+  margin-left: 5px;
+}
+
+.canvas-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #16834d;
+  border-radius: 0 0 14px 14px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #04100ac9;
+  padding: 16px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  text-align: center;
+  padding: 26px;
+  width: min(100%, 330px);
+  background: #111e30;
+  border: 1px solid #34475d;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px #0005;
+}
+
+.big-ball {
+  font-size: 48px;
+}
+
+.overlay-card h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.overlay-card p {
+  color: #b5c3d5;
+  line-height: 1.5;
+}
+
+#startBtn, .kick-btn {
+  background: #38e7a0;
+  color: #06251a;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 13px 22px;
+}
+
+.instructions {
+  margin-top: 20px;
+  padding: 20px;
+  background: #111e30;
+  border: 1px solid #25364c;
+  border-radius: 14px;
+}
+
+.instructions h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.instructions p {
+  color: #c4d0df;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 27px;
+  padding: 4px 6px;
+  margin-right: 3px;
+  text-align: center;
+  color: white;
+  background: #26374d;
+  border: 1px solid #40536b;
+  border-radius: 5px;
+}
+
+.hint {
+  color: #38e7a0 !important;
+}
+
+.mobile-controls {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.movement-pad {
+  display: grid;
+  gap: 5px;
+}
+
+.movement-pad > button {
+  justify-self: center;
+}
+
+.movement-pad div {
+  display: flex;
+  gap: 5px;
+}
+
+.movement-pad button {
+  width: 43px;
+  height: 43px;
+  color: white;
+  background: #26374d;
+  border: 1px solid #40536b;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.kick-btn {
+  min-height: 54px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px 8px;
+  }
+
+  .scoreboard {
+    padding: 12px 9px;
+    gap: 8px;
+  }
+
+  .score {
+    font-size: 25px;
+    gap: 7px;
+  }
+
+  .team {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .team-icon {
+    font-size: 16px;
+  }
+
+  .timer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+
+  .instructions {
+    padding: 15px;
+  }
+}
